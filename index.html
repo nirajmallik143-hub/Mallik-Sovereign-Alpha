@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mallik Sovereign Alpha | Humanity Nepal 7G</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--mallik-blue: #00d4ff;
+--mallik-bg: #0a0b10;
+--mallik-card: #161b22;
+--mallik-accent: #7928ca;
+--text-primary: #e6edf3;
+--success: #238636;
+}
+
+body {
+background-color: var(--mallik-bg);
+color: var(--text-primary);
+font-family: 'Inter', sans-serif;
+margin: 0;
+display: flex;
+flex-direction: column;
+height: 100vh;
+overflow: hidden;
+}
+
+header {
+padding: 20px 40px;
+border-bottom: 1px solid #30363d;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(10, 11, 16, 0.8);
+backdrop-filter: blur(10px);
+}
+
+.brand {
+font-weight: 600;
+letter-spacing: 2px;
+font-size: 1.2rem;
+}
+
+.brand span {
+color: var(--mallik-blue);
+}
+
+.system-status {
+font-family: 'JetBrains Mono', monospace;
+font-size: 0.8rem;
+color: var(--success);
+display: flex;
+align-items: center;
+}
+
+.status-dot {
+height: 8px;
+width: 8px;
+background-color: var(--success);
+border-radius: 50%;
+margin-right: 10px;
+box-shadow: 0 0 10px var(--success);
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+0% { opacity: 1; }
+50% { opacity: 0.4; }
+100% { opacity: 1; }
+}
+
+main {
+flex: 1;
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap: 20px;
+padding: 30px;
+}
+
+.card {
+background: var(--mallik-card);
+border: 1px solid #30363d;
+border-radius: 12px;
+padding: 24px;
+position: relative;
+}
+
+.terminal {
+background: #000;
+font-family: 'JetBrains Mono', monospace;
+font-size: 0.85rem;
+color: #8b949e;
+padding: 15px;
+border-radius: 8px;
+height: 300px;
+overflow-y: auto;
+border: 1px solid #30363d;
+}
+
+.metric-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+margin-top: 20px;
+}
+
+.metric-item {
+background: rgba(255, 255, 255, 0.03);
+padding: 15px;
+border-radius: 8px;
+text-align: center;
+}
+
+.metric-value {
+display: block;
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--mallik-blue);
+}
+
+.metric-label {
+font-size: 0.7rem;
+text-transform: uppercase;
+color: #8b949e;
+}
+
+.btn-action {
+background: linear-gradient(45deg, var(--mallik-blue), var(--mallik-accent));
+border: none;
+color: white;
+padding: 12px 24px;
+border-radius: 6px;
+font-weight: 600;
+cursor: pointer;
+width: 100%;
+margin-top: 20px;
+transition: transform 0.2s;
+}
+
+.btn-action:hover {
+transform: scale(1.02);
+}
+
+footer {
+padding: 15px 40px;
+font-size: 0.75rem;
+color: #484f58;
+text-align: center;
+border-top: 1px solid #30363d;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="brand">MALLIK <span>SOVEREIGN ALPHA</span></div>
+<div class="system-status">
+<div class="status-dot"></div>
+7G HUMANITY NEPAL CONNECTED
+</div>
+</header>
+
+<main>
+<section class="card">
+<h3>Market Analysis Visualization</h3>
+<div style="height: 250px; display: flex; align-items: center; justify-content: center; border: 1px dashed #30363d;">
+<p style="color: #484f58;">[Quantum Stream: Aggregating Global Liquidity Pools...]</p>
+</div>
+
+<div class="metric-grid">
+<div class="metric-item">
+<span class="metric-value" id="alpha-yield">+12.4%</span>
+<span class="metric-label">Projected Alpha</span>
+</div>
+<div class="metric-item">
+<span class="metric-value" id="risk-level">Low</span>
+<span class="metric-label">Risk Shield Status</span>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h3>Command Terminal</h3>
+<div class="terminal" id="output">
+> Initializing Mallik Group 7G Protocol...<br>
+> Accessing MIT Licensed Core...<br>
+> Scanning for Arbitrage Vectors...<br>
+</div>
+<button class="btn-action" onclick="initiateSequence()">INITIATE TRADE SEQUENCE</button>
+</section>
+</main>
+
+<footer>
+Engineered by Niraj Mallik | Mallik Group &copy; 2024 | Humanity Nepal 7G Architecture
+</footer>
+
+<script>
+const output = document.getElementById('output');
+const logs = [
+"Analyzing BTC/USD Liquidity...",
+"Risk Shield: Stop-loss calibrated at 2.4%",
+"Quantum heuristic node 04 active...",
+"Alpha signal detected: Probability 88%",
+"Syncing with Mallik Sovereign Treasury...",
+"Executing micro-order #7741..."
+];
+
+function addLog() {
+const time = new Date().toLocaleTimeString();
+const randomLog = logs[Math.floor(Math.random() * logs.length)];
+output.innerHTML += > [${time}] ${randomLog}<br>;
+output.scrollTop = output.scrollHeight;
+}
+
+function initiateSequence() {
+output.innerHTML += <br><span style="color: #00d4ff;">> INITIALIZING QUANTUM TRADE SEQUENCE...</span><br>;
+setInterval(addLog, 2000);
+}
+</script>
+
+</body>
+</html>
+`
