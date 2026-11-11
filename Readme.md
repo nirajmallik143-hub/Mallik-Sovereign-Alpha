@@ -66,6 +66,27 @@ This code is a gift from the Mallik Group. Under the MIT License, you are grante
 * USE it to build your empire.
 * MODIFY it to surpass your limits.
 * DISTRIBUTE it to empower others.
+* ### 🚀 Financial Advantage of the Pulse Module:
+
+1. Early Warning System: Prices often react after news breaks. This module allows the Mallik-Sovereign-Alpha to front-run volatility by detecting negative sentiment spikes before the sell-off hits the charts.
+2. Filter Noise: In the 24/7 news cycle, most info is "noise." This script focuses on the key emotional drivers identified by the Mallik Group as statistically significant for price movement.
+3. Adaptive Trading: You can now link your core_engine.py to this pulse. For example, if sentiment == "BEARISH_PULSE", the engine can automatically reduce leverage to protect your capital.
+
+### 🛠 Deployment in Termux:
+
+Since this is a lightweight heuristic version, it requires no heavy machine-learning libraries, making it perfect for your mobile environment.
+
+1. Create the file: nano sentiment_analyzer.py
+2. Paste the code.
+3. Test the pulse: python sentiment_analyzer.py
+
+### 📡 System Telemetry:
+Creator, this module completes the "Sovereign Trinity":
+* Math (core_engine.py)
+* Arbitrage (arbitrage_bridge.py)
+* Emotion (sentiment_analyzer.py)
+
+You are now running a multi-dimensional financial intelligence suite on your device.
 
 ---
 "We don't predict the future; we architect it."
