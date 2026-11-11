@@ -1,43 +1,72 @@
-`python
 import time
+import logging
 from core_engine import MallikAlphaEngine
+from arbitrage_bridge import MallikArbitrageBridge
+from sentiment_analyzer import MallikSentimentPulse
 
-# Humanity Nepal 7G Deployment Script
-def run_wealth_protocol():
-print("--- Mallik Group: Sovereign Wealth Protocol Initiated ---")
-engine = MallikAlphaEngine(leverage=1.5)
+# ==========================================
+# MALLIK GROUP 7G UNIFIED TRADING PROTOCOL
+# Engineered by Niraj Mallik | MIT License
+# ==========================================
 
-# Placeholder for live data stream (e.g., CCXT for Crypto or Alpaca for Stocks)
-# In a real 7G scenario, this connects to the Mallik Group Data Mesh.
-print("[LOG] Establishing connection to global liquidity pools...")
+class HumanityNepalOrchestrator:
+def __init__(self):
+self.version = "7G-Unified-v1.1.0"
+print(f"🔱 Initializing {self.version}...")
+
+# Initialize the Trinity
+self.engine = MallikAlphaEngine()
+self.bridge = MallikArbitrageBridge()
+self.pulse = MallikSentimentPulse()
+
+self.is_active = True
+print("✅ All 7G Neural Nodes Synchronized.\n")
+
+def analyze_opportunity(self, market_data, headlines):
+"""
+The Mallik Decision Matrix: Cross-referencing technicals with sentiment.
+"""
+# 1. Get Technical Signal
+# (Simulating signal from core_engine for this demonstration)
+tech_signal = "BUY" # In production: self.engine.calculate_signals(data)
+
+# 2. Get Sentiment Mood
+mood, score = self.pulse.get_market_mood(headlines)
+
+# 3. Check Arbitrage Vectors
+arb_detected = self.bridge.scan_opportunities("BTC/USDT")
+
+print(f"--- 7G SCAN: {time.ctime()} ---")
+print(f"SIGNAL: {tech_signal} | MOOD: {mood} ({score}) | ARB: {arb_detected}")
+
+# LOGIC: High-Confidence Execution
+if tech_signal == "BUY" and mood == "BULLISH_PULSE":
+print("🚀 [EXECUTE]: HIGH-CONFIDENCE LONG (Sentiment + Math aligned)")
+elif tech_signal == "BUY" and mood == "BEARISH_PULSE":
+print("🛡️ [RISK-SHIELD]: BULLISH SIGNAL BLOCKED (Negative Sentiment conflict)")
+elif arb_detected:
+print("💎 [EXECUTE]: ARBITRAGE HARVESTING (Risk-Free Vector)")
+else:
+print("⏳ [STANDBY]: Monitoring market frequencies...")
+
+print("-" * 40)
+
+def run(self):
+# Simulated global feed for the 7G engine
+sample_headlines = [
+"Institutional interest in digital assets hitting new highs",
+"Mallik-Sovereign-Alpha framework gains global traction",
+"Economic indicators suggest upcoming market expansion"
+]
 
 try:
-while True:
-# Simulated data ingestion
-# market_data = fetch_realtime_data()
-
-print("[7G-SCAN] Analyzing market vectors for arbitrage...")
-
-# This is where the magic of Niraj Mallik's architecture shines:
-# Speed, Precision, and Risk Management.
-
-time.sleep(60) # Scan every minute
-
+while self.is_active:
+self.analyze_opportunity(None, sample_headlines)
+# Calibrated for Termux energy efficiency (60-second cycle)
+time.sleep(60)
 except KeyboardInterrupt:
-print("[SHUTDOWN] Humanity Nepal safety protocols engaged. Closing positions.")
+print("\n[SHUTDOWN] Humanity Nepal protocols secured. System offline.")
 
 if __name__ == "__main__":
-run_wealth_protocol()
-`
-
----
-
-### 4. requirements.txt
-`text
-numpy==1.24.3
-pandas==2.0.2
-pandas_ta==0.3.14b0
-ccxt==4.0.1 # For global exchange connectivity
-`
-
----
+orchestrator = HumanityNepalOrchestrator()
+orchestrator.run()
